@@ -48,7 +48,7 @@ abline(h = 0.5, col = "red", lty = 2) \n
 The plot will show somewthing like this:
 
 <p align="center">
-  <img src="images/Coin toss.png" width="400" alt="Proportion Plot">
+  <img src="_teaching/Coin toss.png" width="400" alt="Proportion Plot">
 </p>
 
 
