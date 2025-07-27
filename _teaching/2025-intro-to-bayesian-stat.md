@@ -47,6 +47,10 @@ abline(h = 0.5, col = "red", lty = 2) \n
 
 The plot will show somewthing like this:
 
+<p align="center">
+  <img src="Coin toss.png" width="400" alt="Proportion Plot">
+</p>
+
 
 As the no of trials increase, we can see the proportion of heads occuring converges to 0.5 -  the theoretical probability or "chance" that heads will appear when the coin is tossed. Thus we now quantify chance that heads appear as 0.5. The frequentist argues:
 
