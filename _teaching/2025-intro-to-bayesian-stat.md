@@ -58,7 +58,13 @@ As the no of trials increase, we can see the proportion of heads occuring conver
 
 "As the no of trials increase, the proportion of a certain event occuring converges to its true probability"
 
-This fact is supported by a very important theorem in probability called the <b>Law of Large Numbers</b>
+This fact is supported by a very important theorem in probability called the <b>Law of Large Numbers</b> which states that 
+
+<strong>"If \\(X_1, X_2,... X_n\\) are IID random variables with finite mean and variance,
+
+\\(\lim_{n \to \infty} P(|\bar{X_n} - \mathbb{E}(X)|> \epsilon) \to 0\\)  for  \\(\epsilon > 0\\)"</strong>
+
+Ex: Use LLN to show the above probability converges
 
 Now how does a Bayesian define this notion of chance?
 
@@ -76,7 +82,7 @@ We interpret \\(P(A)\\) as the strength of the argument <b>A</b> where
 
 You may ask, "Why do we care about this interpretation at all? After all, the calculations will remain the same!"
 
-Yes, probability calculations in bayesian and frequentist views are almost same but the Bayesian interpretation of probability has more practical applications. In our day-to-day life we use probabilities to express our confidence in the statement. A 30% chance of rain hardly means out of 100 days, around 30 of them will make us traverse through the "ocean of knowledge" through the ISI campus!. It means I am not so sure about raining but it might "given the weather of the past few days". Moreover, I can't afford to fail half of my papers to tell my friends, "I have a 50-50 chance to pass this course"!. In such scenarios, we want to interpret probability as belief. Later we will learn that Every Bayes rule is admissible ( in other words, no other rule is strictly better in every scenario).
+Yes, probability calculations in bayesian and frequentist views are almost same but the Bayesian interpretation of probability has more practical applications. In our day-to-day life we use probabilities to express our confidence in the statement. A 30% chance of rain hardly means out of 100 days, around 30 of them will make us traverse through the "ocean of knowledge" through the ISI campus!. It means I am not so sure about raining but it might "given the weather of the past few days". Moreover, I can't afford to fail half of my papers to tell my friends, "I have a 50-50 chance to pass this course"!. In such scenarios, we want to interpret probability as belief. Later we will learn that every Bayes rule is admissible ( in other words, no other rule is strictly better in every scenario). This is the reason why we are interested in Bayesian interpretation of data.
 
 
 Heading 2
