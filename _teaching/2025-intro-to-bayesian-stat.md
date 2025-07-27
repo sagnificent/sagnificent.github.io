@@ -60,9 +60,7 @@ As the no of trials increase, we can see the proportion of heads occuring conver
 
 This fact is supported by a very important theorem in probability called the <b>Law of Large Numbers</b> which states that 
 
-<strong>"If \\(X_1, X_2,... X_n\\) are IID random variables with finite mean and variance,
-
-\\(\lim_{n \to \infty} P(|\bar{X_n} - \mathbb{E}(X)|> \epsilon) \to 0\\)  for  \\(\epsilon > 0\\)"</strong>
+<strong>"If \\(X_1, X_2,... X_n\\) are IID random variables with finite mean and variance,\\(\lim_{n \to \infty} P(|\bar{X_n} - \mathbb{E}(X)|> \epsilon) \to 0\\)  for  \\(\epsilon > 0\\)"</strong>
 
 Ex: Use LLN to show the above probability converges
 
