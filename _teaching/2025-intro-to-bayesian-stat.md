@@ -19,15 +19,19 @@ Toss a coin 100 times. Count the proportion of heads among the 100 trials. Here'
 <textarea id="rcode" rows="12" cols="70">
 set.seed(1)
 
-heads <- sample(c(0, 1), size = 100, rep = TRUE) \n
-proportion_heads <- cumsum(heads) / (1:100) \n
+heads <- sample(c(0, 1), size = 100, rep = TRUE)
+
+proportion_heads <- cumsum(heads) / (1:100)
+
 plot(1:100, proportion_heads,
      xlab = "No of Trials",
      ylab = "Proportion of Heads",
      main = "Cumulative Proportion of Heads (Fair Coin Toss)",
      ylim = c(0, 1),
-     type = "b") \n
-abline(h = 0.5, col = "red", lty = 2) \n
+     type = "b")
+     
+abline(h = 0.5, col = "red", lty = 2)
+
 </textarea>
 <br>
 
@@ -47,7 +51,7 @@ abline(h = 0.5, col = "red", lty = 2) \n
 
 The plot will show somewthing like this:
 
-![Proportion Plot](images/Coin toss.png)
+![Proportion Plot](../images/Coin toss.png)
 
 
 
