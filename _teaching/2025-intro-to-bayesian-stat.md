@@ -16,7 +16,7 @@ Statistics as a subject has not been around for a long time. It had started to m
 
 Toss a coin 100 times. Count the proportion of heads among the 100 trials. Here's a simple code to run this:
 
-<textarea id="rcode" rows="12" cols="70">
+'''r
 set.seed(1)
 
 heads <- sample(c(0, 1), size = 100, rep = TRUE)
@@ -31,23 +31,7 @@ plot(1:100, proportion_heads,
      type = "b")
      
 abline(h = 0.5, col = "red", lty = 2)
-
-</textarea>
-<br>
-
-<style>
-  textarea#rcode {
-    width: 90%;
-    font-family: 'Fira Code', monospace;
-    font-size: 14px;
-    padding: 10px;
-    border: 2px solid #444;
-    border-radius: 10px;
-    background-color: #f3f3f3;
-    color: #222;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-  }
-</style>
+'''
 
 The plot will show somewthing like this:
 
@@ -67,13 +51,13 @@ Now how does a Bayesian define this notion of chance?
 
 A Bayesian defines "chance" as "belief in occurence of that event". Probability that Heads appear when a coin is tossed means "I believe that there is a 50% chance of heads occuring when the coin is tossed".
 
-We interpret $P(A)$ as the strength of the argument <b>A</b> where 
+We interpret \\($P(A)$\\) as the strength of the argument <b>A</b> where 
 
-$0$ implies $\bar{A}$
+\\($0$\\) implies \\($\bar{A}$\\)
 
-$1$ implies $A$
+\\($1$\\) implies \\($A$\\)
 
-$(0,1)$ implies the degree of confidence in our argument.
+\\($(0,1)$\\) implies the degree of confidence in our argument.
 
 You may ask, "Why do we care about this interpretation at all? After all, the calculations will remain the same!"
 
