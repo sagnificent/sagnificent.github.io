@@ -35,13 +35,6 @@ author_profile: true
 
 # Projects & Research Experience
 
-* **Myeloid KLF4 in Lung Fibrosis**, Indian Statistical Institute, Kolkata
-  *January 2026 – Present*
-
-  * Analyzing single-cell RNA-seq data to investigate the role of KLF4 in myeloid cells and fibroblast activation in lung fibrosis.
-  * Performing data integration, normalization, and cell-type-specific expression analysis using Seurat.
-  * Studying KLF4 and collagen gene expression (COL1A1, COL3A1) to understand extracellular matrix remodeling.
-
 * **Lag-Aware Statistical Modelling of Tiger Mortality and Growth**, Senckenberg Biodiversity and Climate Research Centre
   *December 2025 – Present*
 
@@ -100,27 +93,9 @@ author_profile: true
 
 # Publications
 
-<ul>
-{% for post in site.publications reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}
-</ul>
-
 # Talks
 
-<ul>
-{% for post in site.talks reversed %}
-  {% include archive-single-talk-cv.html %}
-{% endfor %}
-</ul>
-
 # Teaching
-
-<ul>
-{% for post in site.teaching reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}
-</ul>
 
 # Contact
 
