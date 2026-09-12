@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sagnik Roy - Personal Portfolio</title>
+
+  <meta name="description"
+    content="Sagnik Roy - Bachelor of Statistics student at the Indian Statistical Institute, Kolkata. Interests in Bayesian statistics, statistical ecology, machine learning and interpretability of AI models.">
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Sagnik Roy" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Sagnik Roy">Sagnik Roy</h1>
+
+          <p class="title">B.Stat Student, ISI Kolkata</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:roy.sagnik.imaginer@gmail.com" class="contact-link">roy.sagnik.imaginer@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Academic Email</p>
+
+              <a href="mailto:bs2431@isical.ac.in" class="contact-link">bs2431@isical.ac.in</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="library-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Institute</p>
+
+              <address>Indian Statistical Institute, Kolkata</address>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>205 B.T. Road, Kolkata &ndash; 700108, India</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/sagnificent" class="social-link" target="_blank" rel="noopener noreferrer"
+              aria-label="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/sagnik-roy-501aa9309/" class="social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="LinkedIn">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="./cv.pdf" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
+              <ion-icon name="document-text-outline"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Coursework</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm Sagnik Roy, a second-year Bachelor of Statistics student at the Indian Statistical Institute, Kolkata.
+            My interests lie in Bayesian statistics, AI theory, machine learning and stochastic processes &mdash; and
+            especially in what happens when they meet real data.
+          </p>
+
+          <p>
+            Most of my work so far has been applied: modelling lagged relationships between tiger mortality and
+            population growth in India, analysing single-cell RNA-seq data to study myeloid&ndash;fibroblast
+            interactions in lung fibrosis, and building predictive models for earthquake intensity and stock movement
+            from text. I like problems where a careful statistical argument does more work than a bigger model.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm interested in</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Bayesian statistics icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Bayesian Statistics</h4>
+
+                <p class="service-item-text">
+                  Prior construction, model selection, robust outlier detection and computational methods such as MCMC.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="machine learning icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Machine Learning &amp; AI Interpretability</h4>
+
+                <p class="service-item-text">
+                  Predictive modelling that can be explained &mdash; understanding why a model decides what it decides.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="statistical ecology icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Statistical Ecology</h4>
+
+                <p class="service-item-text">
+                  Population dynamics, wildlife mortality and the anthropogenic pressures behind them.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="actuarial modelling icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Actuarial Modelling</h4>
+
+                <p class="service-item-text">
+                  Risk, survival and time-series modelling applied to insurance and finance.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - achievements
+        -->
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="trophy-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Achievements</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Jagadis Bose National Science Talent Search (JBNSTS)</h4>
+
+              <span>2023</span>
+
+              <p class="timeline-text">
+                Received the "Encouragement Award" from the Govt. of West Bengal, given to top science students to
+                motivate research interest.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">ISI Entrance Examination &mdash; All India Rank 71</h4>
+
+              <span>2024</span>
+
+              <p class="timeline-text">
+                Admitted to the Bachelor of Statistics programme at the Indian Statistical Institute, Kolkata.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">American Mathematics Competition (AMC 12)</h4>
+
+              <span>2023</span>
+
+              <p class="timeline-text">
+                School Rank 2 (12A &amp; 12B) and Country Rank 71 (12B).
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Indian Olympiad Qualifier in Mathematics (IOQM)</h4>
+
+              <span>2021 &amp; 2023</span>
+
+              <p class="timeline-text">
+                Qualified in both attempts.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">National Standard Examination in Chemistry (NSEC)</h4>
+
+              <span>2023</span>
+
+              <p class="timeline-text">
+                Qualified.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Indian Statistical Institute, Kolkata</h4>
+
+              <span>July 2024 &mdash; Present</span>
+
+              <p class="timeline-text">
+                Bachelor of Statistics (2nd year). Current aggregate 89.67%. Core interests: data science and applied
+                statistics.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Delhi Public School, Ruby Park, Kolkata</h4>
+
+              <span>Graduated May 2024</span>
+
+              <p class="timeline-text">
+                Standard 12 (CBSE) &mdash; High school equivalent. Grade: 97.4%.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">South Point High School, Kolkata</h4>
+
+              <span>Graduated May 2022</span>
+
+              <p class="timeline-text">
+                Standard 10 (CBSE) &mdash; Secondary school equivalent. Grade: 98.6%.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="flask-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Research Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Myeloid KLF4 in Lung Fibrosis &mdash; ISI, Kolkata</h4>
+
+              <span>January 2026 &mdash; Present</span>
+
+              <p class="timeline-text">
+                Analysing single-cell RNA-seq data to study the role of KLF4 in myeloid cells and its association with
+                fibroblast activation in lung fibrosis. Performing data integration, normalisation and cell-type
+                specific expression analysis using Seurat, focusing on KLF4 and collagen genes (COL1A1, COL3A1) to
+                investigate myeloid&ndash;fibroblast interactions and extracellular matrix remodelling.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Lag-Aware Statistical Modelling of Tiger Mortality and Growth
+                &mdash; Senckenberg Biodiversity and Climate Research Centre</h4>
+
+              <span>December 2025 &mdash; Present</span>
+
+              <p class="timeline-text">
+                Developing statistical models to study lagged relationships between tiger mortality and population
+                growth in India, and investigating deviations from natural population regulation to identify potential
+                anthropogenic influences including poaching and habitat disturbance.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Introduction to Bayesian Data Analysis &mdash; ISI, Kolkata</h4>
+
+              <span>May 2025 &mdash; July 2025</span>
+
+              <p class="timeline-text">
+                Reading project on the fundamentals of Bayesian inference, construction of priors, model selection,
+                robust Bayesian outlier detection and computational methods (MCMC).
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">R</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">C</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Statistical Modelling &amp; Inference</h5>
+                <data value="85">85%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Machine Learning (Scikit-learn, TensorFlow)</h5>
+                <data value="75">75%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Tools &amp; languages</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Programming</h4>
+
+                <p class="service-item-text">
+                  C, Python, R.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Libraries &amp; Tools</h4>
+
+                <p class="service-item-text">
+                  NumPy, Pandas, Scikit-learn, TensorFlow, Matplotlib, Seaborn, dplyr (R), Seurat.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Spoken Languages</h4>
+
+                <p class="service-item-text">
+                  English (bilingual), Bengali (native), Hindi (bilingual).
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Full CV</h4>
+
+                <p class="service-item-text">
+                  <a href="./cv.pdf" target="_blank" rel="noopener noreferrer">Download the PDF version &rarr;</a>
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PROJECTS
+      -->
+
+      <article class="portfolio" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Research</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Machine learning</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Research</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Machine learning</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="research">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="Myeloid KLF4 in Lung Fibrosis" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Myeloid KLF4 in Lung Fibrosis</h3>
+
+                <p class="project-category">Research &middot; ISI Kolkata &middot; 2026</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="research">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="Lag-Aware Modelling of Tiger Mortality"
+                    loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Lag-Aware Modelling of Tiger Mortality</h3>
+
+                <p class="project-category">Research &middot; Senckenberg BiK-F &middot; 2025</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="research">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="Introduction to Bayesian Data Analysis"
+                    loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Introduction to Bayesian Data Analysis</h3>
+
+                <p class="project-category">Reading project &middot; ISI Kolkata &middot; 2025</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="machine learning">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="CDI &amp; MMI Prediction of Earthquakes"
+                    loading="lazy">
+                </figure>
+
+                <h3 class="project-title">CDI &amp; MMI Prediction of Earthquakes</h3>
+
+                <p class="project-category">Competition &middot; Impact-Metrics, IIT-BHU &middot; 2nd place</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="machine learning">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="Stock Prediction from Tweets" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Stock Prediction from Tweets</h3>
+
+                <p class="project-category">Competition &middot; Technalytics, IIT-BHU &middot; 2nd place</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - project details
+        -->
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="document-text-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Details</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Myeloid KLF4 in Lung Fibrosis &mdash; ISI, Kolkata</h4>
+
+              <span>January 2026 &mdash; Present</span>
+
+              <p class="timeline-text">
+                Analysing single-cell RNA-seq data to study the role of KLF4 in myeloid cells and its association with
+                fibroblast activation in lung fibrosis. Data integration, normalisation and cell-type specific
+                expression analysis in Seurat, focusing on KLF4 and collagen genes (COL1A1, COL3A1) to investigate
+                myeloid&ndash;fibroblast interactions and extracellular matrix remodelling.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Lag-Aware Statistical Modelling of Tiger Mortality and Growth
+                &mdash; Senckenberg Biodiversity and Climate Research Centre</h4>
+
+              <span>December 2025 &mdash; Present</span>
+
+              <p class="timeline-text">
+                Developing statistical models for lagged relationships between tiger mortality and population growth in
+                India. Investigating deviations from natural population regulation to identify potential anthropogenic
+                influences, including poaching and habitat disturbance.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Introduction to Bayesian Data Analysis &mdash; ISI, Kolkata</h4>
+
+              <span>May 2025 &mdash; July 2025</span>
+
+              <p class="timeline-text">
+                A reading project on the fundamentals of Bayesian inference, construction of priors, model selection,
+                robust Bayesian outlier detection and computational methods (MCMC).
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">CDI &amp; MMI Prediction of Earthquakes &mdash; Impact-Metrics
+                (IIT-BHU)</h4>
+
+              <span>December 2024 &mdash; January 2025</span>
+
+              <p class="timeline-text">
+                Engineered a Random Forest model to predict the CDI (Community Density Intensity) and MMI (Modified
+                Mercalli Intensity) of earthquakes, so that both can be estimated remotely without visiting the site.
+                Achieved accuracy scores of 95% and 90% on the test dataset for CDI and MMI respectively, and built a
+                further model to flag alert systems that underestimate an earthquake's intensity with 70% accuracy.
+                Secured 2nd place in the competition.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Stock Prediction from Tweets &mdash; Technalytics (IIT-BHU)</h4>
+
+              <span>January 2025 &mdash; February 2025</span>
+
+              <p class="timeline-text">
+                Applied sentiment analysis and named entity recognition to tweets to predict stock price outcomes,
+                classifying keywords (companies, personalities, etc.) as high-risk, low-risk or stable. Fitted a
+                logistic regression model to predict stock prices from tweets with 70% accuracy. Secured 2nd place in
+                the competition.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #COURSEWORK
+      -->
+
+      <article class="blog" data-page="coursework">
+
+        <header>
+          <h2 class="h2 article-title">Coursework</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Relevant coursework taken and currently in progress as part of the Bachelor of Statistics programme at ISI
+            Kolkata.
+          </p>
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="calculator-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Probability &amp; Stochastics</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Probability Theory I, II &amp; III</h4>
+
+              <span>ISI Kolkata</span>
+
+              <p class="timeline-text">
+                Random variables, discrete and continuous distributions, expectation, variance, CLT, convergence,
+                Lebesgue integral.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Stochastic Processes</h4>
+
+              <span>ISI Kolkata</span>
+
+              <p class="timeline-text">
+                Discrete Markov chains with countable state space, introduction to MCMC, perfect sampling.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="bar-chart-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Statistics</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Statistical Methods I, II, III &amp; IV</h4>
+
+              <span>ISI Kolkata</span>
+
+              <p class="timeline-text">
+                Linear and logistic regression, estimation (MLE, moments), hypothesis testing, the EM algorithm,
+                steepest gradient descent, multivariate analysis, bootstrapping techniques, time series analysis.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="analytics-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Mathematics</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Analysis I, II &amp; III</h4>
+
+              <span>ISI Kolkata</span>
+
+              <p class="timeline-text">
+                Real analysis (sequences, series, integration), multivariable calculus, optimisation, Fourier series.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Vectors &amp; Matrices I &amp; II</h4>
+
+              <span>ISI Kolkata</span>
+
+              <p class="timeline-text">
+                Vector spaces, linear maps, matrix properties and decompositions (LU), eigenanalysis, quadratic forms.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="code-slash-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Computing &amp; Sciences</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Programming &amp; Data Structures</h4>
+
+              <span>ISI Kolkata</span>
+
+              <p class="timeline-text">
+                C and Python fundamentals; arrays, pointers, stacks, queues, linked lists.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Molecular Biology</h4>
+
+              <span>ISI Kolkata</span>
+
+              <p class="timeline-text">
+                Replication, transcription, translation, cell division (mitosis, meiosis), definition of gene and the
+                genetic code and the relationship between them, Mendel's laws of genetics and their application in
+                human populations.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://maps.google.com/maps?q=Indian%20Statistical%20Institute%2C%20Kolkata%20700108&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              width="400" height="300" loading="lazy" title="Indian Statistical Institute, Kolkata"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
