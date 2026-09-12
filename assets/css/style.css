@@ -487,6 +487,12 @@ main {
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
+/* six nav items need a little more room on the narrowest phones */
+@media (max-width: 449px) {
+  .navbar-link { padding: 20px 4px; }
+  .navbar-list { padding: 0 6px; }
+}
+
 
 
 

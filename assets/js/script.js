@@ -149,20 +149,40 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+// show one page by its data-page name, and sync the nav highlight
+const showPage = function (name) {
+  let found = false;
+
+  for (let i = 0; i < pages.length; i++) {
+    const match = pages[i].dataset.page === name;
+    pages[i].classList.toggle("active", match);
+    if (match) found = true;
+  }
+
+  for (let i = 0; i < navigationLinks.length; i++) {
+    navigationLinks[i].classList.toggle(
+      "active",
+      navigationLinks[i].innerHTML.toLowerCase().trim() === name
+    );
+  }
+
+  return found;
+}
+
+// open the page named in the URL hash, e.g. index.html#teaching
+const openPageFromHash = function () {
+  const name = decodeURIComponent(window.location.hash.replace("#", "")).toLowerCase().trim();
+  if (name) showPage(name);
+}
+
+openPageFromHash();
+window.addEventListener("hashchange", openPageFromHash);
+
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
 
-    const target = this.innerHTML.toLowerCase().trim();
-
-    for (let j = 0; j < pages.length; j++) {
-      pages[j].classList.toggle("active", target === pages[j].dataset.page);
-    }
-
-    for (let j = 0; j < navigationLinks.length; j++) {
-      navigationLinks[j].classList.toggle("active", navigationLinks[j] === this);
-    }
-
+    showPage(this.innerHTML.toLowerCase().trim());
     window.scrollTo(0, 0);
 
   });

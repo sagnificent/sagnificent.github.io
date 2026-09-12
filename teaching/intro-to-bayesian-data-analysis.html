@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to Bayesian Data Analysis - Sagnik Roy</title>
+
+  <meta name="description"
+    content="Why Bayesian at all? A short introduction contrasting the frequentist and Bayesian interpretations of probability.">
+
+  <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --jet: hsl(0, 0%, 22%);
+      --onyx: hsl(240, 1%, 17%);
+      --eerie-black-1: hsl(240, 2%, 13%);
+      --eerie-black-2: hsl(240, 2%, 12%);
+      --smoky-black: hsl(0, 0%, 7%);
+      --white-1: hsl(0, 0%, 100%);
+      --white-2: hsl(0, 0%, 98%);
+      --orange-yellow-crayola: hsl(45, 100%, 72%);
+      --vegas-gold: hsl(45, 54%, 58%);
+      --light-gray: hsl(0, 0%, 84%);
+      --light-gray-70: hsla(0, 0%, 84%, 0.7);
+      --ff-poppins: 'Poppins', sans-serif;
+      --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
+      --transition-1: 0.25s ease;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--smoky-black);
+      color: var(--light-gray);
+      font-family: var(--ff-poppins);
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .article-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 25px 15px 60px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--light-gray-70);
+      font-size: 14px;
+      text-decoration: none;
+      margin-bottom: 30px;
+      transition: var(--transition-1);
+    }
+
+    .back-link:hover { color: var(--orange-yellow-crayola); }
+
+    .article-card {
+      background: var(--eerie-black-2);
+      border: 1px solid var(--jet);
+      border-radius: 20px;
+      padding: 30px 25px;
+      box-shadow: var(--shadow-1);
+    }
+
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      color: var(--light-gray-70);
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .article-meta .dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--light-gray-70);
+    }
+
+    .article-meta .tag {
+      color: var(--orange-yellow-crayola);
+      font-weight: 400;
+    }
+
+    h1 {
+      color: var(--white-2);
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .lede {
+      color: var(--light-gray-70);
+      font-size: 15px;
+      margin-bottom: 28px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--jet);
+    }
+
+    h2 {
+      color: var(--white-2);
+      font-size: 21px;
+      font-weight: 600;
+      margin: 38px 0 14px;
+    }
+
+    h3 {
+      color: var(--white-2);
+      font-size: 17px;
+      font-weight: 500;
+      margin: 30px 0 12px;
+    }
+
+    p { margin-bottom: 16px; }
+
+    strong, b { color: var(--white-2); font-weight: 500; }
+
+    .claim {
+      border-left: 3px solid var(--orange-yellow-crayola);
+      background: var(--eerie-black-1);
+      border-radius: 0 10px 10px 0;
+      padding: 14px 18px;
+      margin: 20px 0;
+      color: var(--white-2);
+    }
+
+    .theorem {
+      background: var(--eerie-black-1);
+      border: 1px solid var(--jet);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+
+    .exercise {
+      color: var(--vegas-gold);
+      font-style: italic;
+      margin: 18px 0;
+    }
+
+    pre {
+      background: var(--eerie-black-1);
+      border: 1px solid var(--jet);
+      border-radius: 12px;
+      padding: 18px;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+
+    pre code {
+      font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: var(--light-gray);
+      white-space: pre;
+    }
+
+    figure { margin: 26px 0; }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      background: var(--white-1);
+    }
+
+    figcaption {
+      color: var(--light-gray-70);
+      font-size: 13px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .interpretation-list {
+      list-style: none;
+      margin: 16px 0 20px;
+      padding-left: 4px;
+    }
+
+    .interpretation-list li {
+      margin-bottom: 8px;
+      padding-left: 16px;
+      border-left: 2px solid var(--jet);
+    }
+
+    mjx-container { overflow-x: auto; overflow-y: hidden; }
+
+    @media (min-width: 580px) {
+      .article-wrapper { padding: 40px 30px 80px; }
+      .article-card { padding: 45px 40px; }
+      h1 { font-size: 34px; }
+    }
+  </style>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      },
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+    };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js" id="MathJax-script"
+    async></script>
+</head>
+
+<body>
+
+  <div class="article-wrapper">
+
+    <a class="back-link" href="../index.html#teaching">&larr; Back to teaching</a>
+
+    <article class="article-card">
+
+      <div class="article-meta">
+        <span class="tag">Undergraduate course</span>
+        <span class="dot"></span>
+        <time datetime="2025-07-27">27 July, 2025</time>
+        <span class="dot"></span>
+        <span>Kolkata, India</span>
+      </div>
+
+      <h1>Introduction to Bayesian Data Analysis</h1>
+
+      <p class="lede">Why Bayesian at all?</p>
+
+      <p>
+        Statistics as a subject has not been around for a long time. It had started to materialise as a discipline
+        when gamblers realised they could mathematically quantify "chance", which facilitated their study of gains
+        and losses. Now how we define "chance" is what leads us to the two schools of thought in statistics.
+      </p>
+
+      <h3>The Frequentist Version</h3>
+
+      <p>
+        Toss a coin 100 times. Count the proportion of heads among the 100 trials. Here's a simple code to run this:
+      </p>
+
+      <pre><code>set.seed(1)
+
+heads &lt;- sample(c(0, 1), size = 100, rep = TRUE)
+
+proportion_heads &lt;- cumsum(heads) / (1:100)
+
+plot(1:100, proportion_heads,
+     xlab = "No of Trials",
+     ylab = "Proportion of Heads",
+     main = "Cumulative Proportion of Heads (Fair Coin Toss)",
+     ylim = c(0, 1),
+     type = "b")
+
+abline(h = 0.5, col = "red", lty = 2)</code></pre>
+
+      <p>The plot will show something like this:</p>
+
+      <figure>
+        <img src="../assets/images/coin-toss.png"
+          alt="Cumulative proportion of heads over 100 fair coin tosses, converging towards 0.5" loading="lazy">
+        <figcaption>Cumulative proportion of heads converging to 0.5 as the number of trials grows.</figcaption>
+      </figure>
+
+      <p>
+        As the number of trials increases, we can see the proportion of heads occurring converges to 0.5 &mdash; the
+        theoretical probability, or "chance", that heads will appear when the coin is tossed. Thus we now quantify the
+        chance that heads appear as 0.5. The frequentist argues:
+      </p>
+
+      <p class="claim">
+        "As the number of trials increases, the proportion of a certain event occurring converges to its true
+        probability."
+      </p>
+
+      <p>
+        This fact is supported by a very important theorem in probability called the <b>Law of Large Numbers</b>,
+        which states that:
+      </p>
+
+      <p class="theorem">
+        If \(X_1, X_2, \ldots, X_n\) are IID random variables with finite mean and variance, then
+        \(\lim_{n \to \infty} P(|\bar{X_n} - \mathbb{E}(X)| > \epsilon) \to 0\) for \(\epsilon > 0\).
+      </p>
+
+      <p class="exercise">Exercise: Use the LLN to show the above probability converges.</p>
+
+      <p>Now how does a Bayesian define this notion of chance?</p>
+
+      <h3>The Bayesian Version</h3>
+
+      <p>
+        A Bayesian defines "chance" as "belief in the occurrence of that event". The probability that heads appear
+        when a coin is tossed means "I believe that there is a 50% chance of heads occurring when the coin is tossed".
+      </p>
+
+      <p>
+        We interpret \(P(A)\) as the strength of the argument <b>A</b>, where:
+      </p>
+
+      <ul class="interpretation-list">
+        <li>\(0\) implies \(\bar{A}\)</li>
+        <li>\(1\) implies \(A\)</li>
+        <li>\((0,1)\) implies the degree of confidence in our argument.</li>
+      </ul>
+
+      <p>
+        You may ask, "Why do we care about this interpretation at all? After all, the calculations will remain the
+        same!"
+      </p>
+
+      <p>
+        Yes, probability calculations in the Bayesian and frequentist views are almost the same, but the Bayesian
+        interpretation of probability has more practical applications. In our day-to-day life we use probabilities to
+        express our confidence in a statement. A 30% chance of rain hardly means that out of 100 days, around 30 of
+        them will make us traverse through the "ocean of knowledge" through the ISI campus! It means I am not so sure
+        about it raining, but it might &mdash; "given the weather of the past few days". Moreover, I can't afford to
+        fail half of my papers to tell my friends, "I have a 50-50 chance to pass this course"!
+      </p>
+
+      <p>
+        In such scenarios, we want to interpret probability as belief. Later we will learn that every Bayes rule is
+        admissible (in other words, no other rule is strictly better in every scenario). This is the reason why we are
+        interested in the Bayesian interpretation of data.
+      </p>
+
+    </article>
+
+  </div>
+
+</body>
+
+</html>
