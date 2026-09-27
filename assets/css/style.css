@@ -1886,3 +1886,22 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+/**
+ * inline link row for project resources (code / report / poster);
+ * anchors are display:block in the reset, so lay them out explicitly
+ */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 10px;
+}
+
+.project-links a {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-7);
+  transition: color var(--transition-1);
+}
+
+.project-links a:hover,
+.project-links a:focus { color: var(--vegas-gold); }
