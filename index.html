@@ -685,6 +685,10 @@
               <button data-filter-btn>Machine learning</button>
             </li>
 
+            <li class="filter-item">
+              <button data-filter-btn>Course project</button>
+            </li>
+
           </ul>
 
           <div class="filter-select-box">
@@ -711,6 +715,10 @@
 
               <li class="select-item">
                 <button data-select-item>Machine learning</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Course project</button>
               </li>
 
             </ul>
@@ -753,6 +761,26 @@
                 <h3 class="project-title">Myeloid KLF4 in Lung Fibrosis</h3>
 
                 <p class="project-category">Research &middot; ISI Kolkata &middot; 2026</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="course project">
+              <a href="https://github.com/sagnificent/Time-Series-Analysis-of-Indian-Temperature-Data" target="_blank" rel="noopener noreferrer">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="logo-github"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-timeseries.jpg"
+                    alt="Title slide: Non-Stationary Time Series Analysis of Temperature Data in India"
+                    loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Time Series Analysis of Indian Temperature</h3>
+
+                <p class="project-category">Course project &middot; ISI Kolkata &middot; 2026</p>
 
               </a>
             </li>
@@ -880,6 +908,31 @@
                 <a href="https://github.com/sagnificent/Response-of-Indian-Iron-and-Steel-Companies-Towards-Biodiversity-SURGE-2026-/blob/master/Sagnik%20Roy%20Poster.pdf" target="_blank" rel="noopener noreferrer">Poster (PDF) &rarr;</a>
                 <a href="./assets/surge-2026-certificate.pdf" target="_blank" rel="noopener noreferrer">Certificate
                   (PDF) &rarr;</a>
+              </div>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Non-Stationary Time Series Analysis of Temperature Data in India
+                &mdash; ISI, Kolkata</h4>
+
+              <span>April 2026</span>
+
+              <p class="timeline-text">
+                Statistical Methods IV course project under Prof. Shyamal Krishna De, with Sahitya Kumbhakar and
+                Sourath Biswas. A SARIMA study of India's monthly average land temperature from Berkeley Earth,
+                January 1880 to August 2013 &mdash; 1,604 monthly observations split 80/20 into 1,283 training and
+                321 test points. Established non-stationarity with KPSS and Mann&ndash;Kendall tests, applied lag-1
+                and lag-12 differencing, identified candidate orders from ACF/PACF, and selected between them on
+                Ljung&ndash;Box tests and residual RMSE. The chosen SARIMA(0,1,2)(0,1,1)[12] leaves residuals passing
+                Ljung&ndash;Box at lag 12, and its forecasts reproduce the seasonal cycle within 95% confidence
+                bands. Written in R with renv for reproducibility.
+              </p>
+
+              <div class="project-links">
+                <a href="./assets/time-series-india-temperature-report.pdf" target="_blank" rel="noopener noreferrer">Report (PDF) &rarr;</a>
+                <a href="https://github.com/sagnificent/Time-Series-Analysis-of-Indian-Temperature-Data" target="_blank" rel="noopener noreferrer">Code on GitHub &rarr;</a>
               </div>
 
             </li>
